@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알바몬 | [단기] 토버드식 공부법 연구 알바</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        /* 알바몬 공식 헤더 느낌 재현 */
+        .header {
+            background-color: #fff;
+            padding: 12px 20px;
+            border-bottom: 1px solid #e1e4e6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .header-content {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            color: #ff6b00; /* 알바몬 고유 오렌지 */
+            letter-spacing: -1px;
+        }
+        .logo span {
+            color: #111;
+            font-weight: 700;
+        }
+        .header-sub {
+            font-size: 13px;
+            color: #888;
+            margin-left: 12px;
+            padding-left: 12px;
+            border-left: 1px solid #e1e4e6;
+        }
+        .container {
+            max-width: 820px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 40px;
+            border: 1px solid #e1e4e6;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+        .main-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            letter-spacing: -0.5px;
+        }
+        .company-name {
+            font-size: 15px;
+            color: #ff6b00;
+            font-weight: bold;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .company-name::after {
+            content: "기업정보 >";
+            font-size: 12px;
+            color: #999;
+            margin-left: 8px;
+            font-weight: normal;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #222;
+            margin-bottom: 30px;
+        }
+        .tab {
+            padding: 12px 24px;
+            font-weight: bold;
+            color: #ff6b00;
+            border-bottom: 3px solid #ff6b00;
+            font-size: 16px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 35px;
+            margin-bottom: 16px;
+            color: #111;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: #ff6b00;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+        .info-table td {
+            padding: 14px 12px;
+            border-bottom: 1px solid #f1f3f5;
+            font-size: 14px;
+        }
+        .info-table td.label {
+            width: 18%;
+            color: #666;
+            font-weight: 600;
+            background-color: #fafbfc;
+        }
+        .info-table td.value {
+            color: #333;
+        }
+        .highlight-pay {
+            color: #ff5500;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .detail-content {
+            background-color: #f8f9fa;
+            padding: 24px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #495057;
+        }
+        .detail-content ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .method-box {
+            background-color: #fff9f0;
+            border: 1px solid #ffe3c2;
+            padding: 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        .btn-box {
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn-submit {
+            background-color: #ff6b00;
+            color: white;
+            padding: 16px 80px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255,107,0,0.2);
+            transition: background 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #e05e00;
+        }
+        .btn-sub-action {
+            background-color: #fff;
+            color: #666;
+            border: 1px solid #cccccc;
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-content">
+        <div class="logo">albamon<span></span></div>
+        <div class="header-sub">채용정보 홈</div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- 메인 타이틀 영역 -->
+    <div class="main-title">
+        ★하루만 공부해도 OK!★ 토버드식 공부법 효과 검증 및 학습 보고서 작성 요원 모집 (재택가능/단기)
+    </div>
+    <div class="company-name">
+        (주)토버드식공부법 교육연구소
+    </div>
+
+    <!-- 탭 영역 -->
+    <div class="tabs">
+        <div class="tab">근무조건 및 상세요강</div>
+    </div>
+
+    <!-- 근무조건 세부 사항 -->
+    <div class="section-title">근무조건</div>
+    <table class="info-table">
+        <tr>
+            <td class="label">급여</td>
+            <td class="value" colspan="3">
+                <span style="background:#ff6b00; color:white; padding:2px 6px; font-size:11px; border-radius:3px; margin-right:5px; font-weight:bold;">건당</span>
+                <span class="highlight-pay">10,000원</span>
+                <div style="font-size:13px; color:#666; margin-top:8px;">
+                    * 일일 강의 수강 후 복습 가이드 이행 시 건당 지급 (일 최대 18강의까지 인정, 최대 180,000원 가능)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">근무기간</td>
+            <td class="value">하루 (1일 단기 가능)</td>
+            <td class="label">업직종</td>
+            <td class="value">교육·연구·조사, 문서작성</td>
+        </tr>
+        <tr>
+            <td class="label">근무요일</td>
+            <td class="value">요일협의 (스케줄 자율 조정)</td>
+            <td class="label">고용형태</td>
+            <td class="value">알바, 재택알바</td>
+        </tr>
+        <tr>
+            <td class="label">근무시간</td>
+            <td class="value">시간협의 (자율 학습제)</td>
+            <td class="label">토리후생</td>
+            <td class="value">토재보험, 인터넷 강의 프리패스 지급</td>
+        </tr>
+    </table>
+
+    <!-- 지원자격 세부 사항 -->
+    <div class="section-title">지원자격 및 우대조건</div>
+    <table class="info-table">
+        <tr>
+            <td class="label">학력</td>
+            <td class="value">학력무관</td>
+            <td class="label">경력</td>
+            <td class="value">경력무관 (신입 지원 가능)</td>
+        </tr>
+        <tr>
+            <td class="label">성별</td>
+            <td class="value">성별무관</td>
+            <td class="label">연령</td>
+            <td class="value">연령무관 (20세 이상 선호)</td>
+        </tr>
+        <tr>
+            <td class="label">우대조건</td>
+            <td class="value" colspan="3">
+                - 즉시 근무 가능자, 성실하고 책임감 강하신 분<br>
+                - 집중력이 약해 <strong>새로운 형태의 자기주도 학습법</strong>을 경험해보고 싶으신 분
+            </td>
+        </tr>
+    </table>
+
+    <!-- 상세요강 세부 사항 -->
+    <div class="section-title">상세요강</div>
+    <div class="detail-content">
+        <strong>[연구 목적]</strong><br>
+        본 연구는 혁신적 학습 알고리즘인 '토버드식 공부법(tovard study method)'의 실제 학습 집중도 및 성적 향상 효과를 검증하기 위함입니다. 참여자는 안내된 가이드라인에 따라 단기 학습을 진행한 후 결과 보고서를 제출하게 됩니다.<br><br>
+        
+        <strong>[주요 업무]</strong>
+        <ul>
+            <li>제공되는 온라인 인터넷 강의 수강 (최대 18강의)</li>
+            <li>토버드식 공부법 가이드라인에 따른 당일 복습 수행</li>
+            <li>학습 후 '효과 분석 및 피드백 보고서' 작성 및 제출 (기본 양식 제공)</li>
+        </ul>
+    </div>
+
+    <!-- 지원방법 세부 사항 -->
+    <div class="section-title">접수기간 및 방법</div>
+    <div class="method-box">
+        ⏱️ <strong>접수기간 : 상시채용 (채용 마감 시 조기 종료)</strong><br>
+        💬 <strong>문자 지원 : 010-4255-6507</strong> (이겨레 대표이사)<br><br>
+        지원 희망 시 아래 양식에 맞춰 문자를 전송해 주세요.<br>
+        <span style="color: #e74c3c; font-weight: bold; background: #fff; padding: 2px 6px; border: 1px solid #ffd0d0; border-radius: 4px;">[ 이름 / 사는곳 / 나이 / 토버드알바지원 ]</span>
+    </div>
+
+    <!-- 채용담당자 정보 -->
+    <div class="section-title">채용담당자 정보</div>
+    <table class="info-table">
+        <tr>
+            <td class="label">담당자</td>
+            <td class="value">이겨레 대표이사(토버대학교 토끼학박사)</td>
+            <td class="label">기업인증</td>
+            <td class="value" style="color: #2ecc71; font-weight: bold;">✓ 인증 완료 (알바몬 안심기관)</td>
+        </tr>
+    </table>
+
+    <!-- 지원하기 버튼 -->
+    <div class="btn-box">
+        <button class="btn-sub-action" onclick="alert('스크랩 되었습니다.')">☆ 스크랩</button>
+        <button class="btn-submit" onclick="applyAlert()">온라인 지원하기</button>
+    </div>
+</div>
+
+<script>
+    function applyAlert() {
+        alert("🚨 [토버드식공부법 연구소 알림] \n\n온라인 지원 시스템 점검 중입니다. \n불편을 드려 죄송합니다. \n\n상단 공고에 안내된 번호(010-4255-6507)로 \n[이름/사는곳/나이] 양식을 맞춰 문자로 지원해 주세요!");
+    }
+</script>
+
+</body>
+</html>
